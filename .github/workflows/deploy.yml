@@ -16,6 +16,16 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: Install the latest version of pnpm
+        run: npm install -g pnpm
+      - name: Check for network issues and proxy settings
+        run: |
+          echo "Checking network issues and proxy settings..."
+          curl -I https://registry.npmjs.org/
+      - name: Clear pnpm cache
+        run: pnpm store prune
+      - name: Set a different registry for pnpm
+        run: pnpm config set registry https://registry.npmjs.org/
       - name: Install, build, and upload your site
         uses: withastro/action@v0
 
