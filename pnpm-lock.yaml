@@ -28,8 +28,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       pnpm:
-        specifier: ^8.15.9
-        version: 8.15.9
+        specifier: ^9.12.3
+        version: 9.12.3
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
