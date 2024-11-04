@@ -17,7 +17,8 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install the latest version of pnpm
-        run: npm install -g pnpm
+        run: |
+          npm install -g pnpm || { echo "pnpm installation failed"; exit 1; }
       - name: Check for network issues and proxy settings
         run: |
           echo "Checking network issues and proxy settings..."
