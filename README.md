@@ -10,12 +10,12 @@
 
   If you're interested in using this repository as a template, please consider forking it and leaving a star.
 
-  <img src='https://img.shields.io/github/issues/toxocious/toxocious.github.io?style=for-the-badge&logo=appveyor' />
-  <img src='https://img.shields.io/github/forks/toxocious/toxocious.github.io?style=for-the-badge&logo=appveyor' />
-  <img src='https://img.shields.io/github/stars/toxocious/toxocious.github.io?style=for-the-badge&logo=appveyor' />
-  <img src='https://img.shields.io/github/license/toxocious/toxocious.github.io?style=for-the-badge&logo=appveyor' />
-  <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FToxocious%toxocious.github.io">
-    <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FToxocious%toxocious.github.io&countColor=%2337d67a" />
+  <img src='https://img.shields.io/github/issues/Thangta03/Portfolio?style=for-the-badge&logo=appveyor' />
+  <img src='https://img.shields.io/github/forks/Thangta03/Portfolio?style=for-the-badge&logo=appveyor' />
+  <img src='https://img.shields.io/github/stars/Thangta03/Portfolio?style=for-the-badge&logo=appveyor' />
+  <img src='https://img.shields.io/github/license/Thangta03/Portfolio?style=for-the-badge&logo=appveyor' />
+  <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FThangta03%Portfolio">
+    <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThangta03%Portfolio&countColor=%2337d67a" />
   </a>
   <br /><br />
 
