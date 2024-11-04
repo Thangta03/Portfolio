@@ -28,7 +28,7 @@ export const config = {
 
         site_type: 'website',
 
-        site_url: 'https://thangta.is-a.dev/',
+        site_url: 'http://thang.ta-portfolio/',
 
         twitter_card_image: 'images/twitter_card.png',
         get twitter_card_description() {
