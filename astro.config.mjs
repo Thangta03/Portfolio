@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import { remarkReadingTime } from './markdown-eta.mjs';
 
 export default defineConfig({
-    site: 'https://toxocious.is-a.dev/',
+    site: 'https://thang.ta-portfolio/',
     integrations: [tailwind({ configFile: './tailwind.config.cjs' })],
     markdown: {
         remarkPlugins: [remarkReadingTime],
