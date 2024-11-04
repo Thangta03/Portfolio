@@ -1,0 +1,26 @@
+---
+import { config } from '../_config';
+
+import Layout from '../layouts/index.astro';
+
+import SocialLinks from '../components/social_links/social_links.astro';
+---
+
+<Layout hide_social_links>
+    <div
+        class="flex flex-col items-center justify-center place-self-center flex-1 gap-6 w-full prose prose-neutral dark:prose-invert"
+    >
+        <h1
+            class="w-full text-4xl mb-0 bg-gradient-to-r from-rose-500 to-violet-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-neutral-200"
+        >
+            {config.headline}
+        </h1>
+        <p class="w-full text-xl mb-0 mt-0">
+            {config.summary}
+        </p>
+
+        <section class="flex flex-row gap-2 items-left w-full">
+            <SocialLinks />
+        </section>
+    </div>
+</Layout>
