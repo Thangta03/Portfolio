@@ -28,7 +28,7 @@ jobs:
         run: pnpm config set registry https://registry.npmjs.org/
       - name: Install dependencies
         run: |
-          pnpm install || { echo "pnpm install failed"; exit 1; }
+          pnpm install --no-frozen-lockfile || { echo "pnpm install failed"; exit 1; }
       - name: Build your site
         run: |
           pnpm build || { echo "pnpm build failed"; exit 1; }
