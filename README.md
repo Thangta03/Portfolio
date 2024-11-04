@@ -108,6 +108,15 @@ To run the workflow with the new error handling, follow these steps:
 
 For more details, refer to the `.github/workflows/deploy.yml` file in this repository.
 
+Additionally, the workflow now includes a step to upload the built site to GitHub Pages. This ensures that your site is automatically deployed to GitHub Pages after a successful build.
+
+To run the workflow with the new deployment step, follow these steps:
+1. Ensure you have the latest version of `pnpm` installed.
+2. Update your workflow file to include the deployment step.
+3. Trigger the workflow by pushing changes to the `main` branch or manually dispatching the workflow.
+
+For more details, refer to the `.github/workflows/deploy.yml` file in this repository.
+
 
 
 # License
