@@ -26,6 +26,13 @@
     "tailwindcss": "^3.3.3",
     "pnpm": "^8.6.3"
   },
+  {
+  "scripts": {
+    "update-deps": "ncu -u && pnpm install",
+    "prestart": "npm run update-deps",
+    "start": "node server.js"
+  }
+}
   "prettier": {
     "plugins": [
       "prettier-plugin-tailwindcss"
