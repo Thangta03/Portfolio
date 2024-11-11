@@ -28,7 +28,7 @@ export const config = {
 
         site_type: 'website',
 
-        site_url: 'https://thangta03.github.io/Portfolio/',
+        site_url: 'https://thangtaportfolio.netlify.app',
 
         twitter_card_image: 'images/twitter_card.png',
         get twitter_card_description() {

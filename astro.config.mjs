@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import { remarkReadingTime } from './markdown-eta.mjs';
 
 export default defineConfig({
-    site: 'https://thangta03.github.io/Portfolio/',
+    site: 'https://thangtaportfolio.netlify.app',
     integrations: [tailwind({ configFile: './tailwind.config.cjs' })],
     markdown: {
         remarkPlugins: [remarkReadingTime],
