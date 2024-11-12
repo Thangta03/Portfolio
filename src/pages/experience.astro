@@ -23,7 +23,7 @@ const contributions = await getCollection('contributions');
                 {
                     work.length > 0 ? (
                         work
-                            .sort((a, b) => a.data?.order - b.data?.order)
+                            .sort((a, b) => (a.data?.order ?? 0) - (b.data?.order ?? 0))
                             .map((work) => (
                                 <article class="flex flex-col gap-2">
                                     <p class="text-sm m-0 text-neutral-600 dark:text-neutral-400">
@@ -98,7 +98,8 @@ const contributions = await getCollection('contributions');
                 {
                     contributions.length > 0 ? (
                         contributions
-                            .sort((a, b) => a.data?.order - b.data?.order)
+
+                            .sort((a, b) => (a.data?.order ?? 0) - (b.data?.order ?? 0))
                             .map((contribution) => (
                                 <article class="flex flex-col gap-2">
                                     <p class="text-sm m-0 text-neutral-600 dark:text-neutral-400">
@@ -164,5 +165,5 @@ const contributions = await getCollection('contributions');
                 }
             </section>
         </section>
-    </section>
+    </section>    </section>
 </Layout>

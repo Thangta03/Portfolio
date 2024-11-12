@@ -1,81 +1,99 @@
 ---
-title: "Exploring ViewTransitions in Astro: A Seamless Journey"
-description: Discover how Astro's ViewTransitions transform web page transitions into seamless, captivating journeys, blending the power of static site generation with dynamic user experiences.
-date: 1693782724222
+title: A First Look Into tRPC
+description: After hearing about tRPC through Twitter discussions and Theo's (@t3dotgg) video presentations and recognizing its ability to streamline the development of end-to-end APIs with robust type support, I was eager to dive into it.
+date: 1660422931604
 ---
 
 
 
-Astro's ViewTransitions is one of the most exciting features that I've seen in a while, and after going hands-on with it while developing this website, I'm in love with it.
+## What Is tRPC, And Why Use It?
+tRPC can be considered to be an alternative to traditional REST or GraphQL solutions and allows you to very easily build and consume completely typesafe APIs without the need for code generation or schemas.
 
-In the ever-evolving world of web development, staying ahead of the curve is essential. Web developers are constantly on the lookout for tools and techniques that not only simplify their work but also enhance the user experience. One such tool that has been generating buzz in the web development community is [Astro](https://astro.build/) – a framework that combines the best of static site generation and traditional server rendering. In this blog post, we'll take a relaxed yet informative journey into Astro's **ViewTransitions**, a feature that adds a touch of magic to web transitions.
+As Typescript and statically typed variables, methods, etc. become more prevalent, we as developers need better ways to statically type API endpoints and share these typings between the code that we write, which leads to better code and less errors.
 
-
-
-## What is Astro?
-
-Before we dive into the enchanting world of ViewTransitions, let's take a moment to appreciate what Astro brings to the table. Astro is a modern framework designed for building fast websites with JavaScript. It takes a unique approach by pre-compiling your website into highly optimized static files, providing the speed of static site generation while maintaining the dynamic capabilities of traditional server rendering.
-
-Astro's thoughtful approach to web development doesn't end with its impressive performance. It's developer-friendly, with a minimalistic syntax and a focus on component-based development. This means you can stay productive and maintainable without drowning in a sea of complex code.
+Using tRPC lets you share your static typing directly between your client and your server if your project is built with full-stack TypeScript.
 
 
 
-## What are ViewTransitions?
-Imagine you're browsing a website, and every time you click on a link, the transition between pages is so seamless that it feels like you're gliding effortlessly through a well-orchestrated dance. This delightful experience is precisely what Astro's ViewTransitions aims to achieve &mdash; and is what this website uses, did you notice?
+## My Brief Experience &mdash; A Summary
+Starting out, I knew you could use tRPC with React, and on top of Prisma and an ORM, so I opted to give it a shot with React, Vite, Express, Prisma, and MongoDB, all of which would use TypeScript where applicable, of course.
 
-At its core, ViewTransitions in Astro are all about creating smooth, visually engaging transitions between web pages. Gone are the days of static, abrupt page changes that disrupt the user's flow. With ViewTransitions, you have the power to choreograph a seamless dance of page transitions that keeps your users engaged and delighted.
+All of these choices make for a pretty solid tech stack, as they're pretty easy to get set-up with each other, and they work &mdash; usually, in my experience &mdash; pretty seemlessly.
 
+tRPC comes with both an ExpressJS and a ReactJS adapter out of the box, so you don't need to manually come up with a solution that allows you to use tRPC with your existing Express and React code, which is pretty great.
 
-
-## The ViewTransitions Magic
-
-ViewTransitions in Astro offer a novel way to handle page transitions. They allow developers to create smooth transitions between pages without the jarring, abrupt jumps that are often associated with traditional web navigation.
-
-With Astro's ViewTransitions, you can define transition effects for page enter and exit events using CSS, JavaScript, or both. This flexibility gives you complete creative control over how your transitions look and feel. Whether you want a subtle fade-in effect, a playful slide, or a jaw-dropping 3D flip, it's all within your reach.
-
-Astro's ViewTransitions are not limited to static content; they also work seamlessly with server-rendered pages. This means you can enjoy the benefits of ViewTransitions without compromising on your site's dynamic functionality.
+Over all, integrating tRPC with an existing full-stack TypeScript project was quite easy. There's a bit to set-up, but once it's done, you don't need to touch most of it except for adding routers to handle any queries that you'll need; just add a new file to handle the router for the API that you want, create a router for it, and then set up your query to optionally take in an input, and then have it output something such as a Prisma fetch.
 
 
 
-## How to Get Started
+## My Brief Experience &mdash; With Details
+With my base tech stack in hand, I was ready to get to work on developing a community website for an online game that I play: Pok&eacute;One, a 3D Pok&eacute;mon game built with MMO concepts in mind.
 
-Getting started with ViewTransitions in Astro is a breeze. Begin by installing Astro using your package manager of choice &mdash; I personally prefer **pnpm**, but both npm and Yarn work as well &mdash; if you haven't already. Astro's [ViewTransitions documentation](https://docs.astro.build/en/guides/view-transitions/) provides clear and concise guidance to help you make your transitions come to life.
+My goal in mind was to serve the community with a website that provided up-to-date information on recent events and content releases, a place to provide countless guides to help walk you through content of the game, as well as a place that provided information on the locations of all Pok&eacute;mon, items, maps, and more, laid out in an easy to understand format. Not to mention a number of invaluable tools for other miscellaneous in-game things.
 
-If your app is using a version of Astro prior to 3.0.0, you will need to either upgrade your application to >3.0.0, or opt-in to the `experimental.viewTransitions` flag &mdash; you can find official documentation about it [here](https://docs.astro.build/en/guides/view-transitions/#upgrade-to-v30-from-v2x). This isn't necessary if your app is already using a version of Astro that is 3.0.0 or greater.
+> ***NOTE:** You can find the source code for this project [here](https://github.com/Toxocious/fleiya-dashboard/), if you're interested in checking out how tRPC can be used on the server alongside using it in the client-side of a React application.*
 
-After you've verified that your application can actually use Astro's awesome ViewTransitions, all that's left is to add a couple of lines of code to your Astro layouts, and you're set.
+With my goal in mind, I generated a TS React template from [Vite](https://github.com/vitejs/vite) (shoutout to the Vite dev team; they're amazing!), and installed the following packages (install **@types/*** packages as needed):
 
-All you need to do is import the ViewTransitions component and include it in your each layout's head element where you want the view transitions to work. It's that easy!
-Now once you navigate to a page that has the `<ViewTransitions />` component, the transition will be seemless with a nice animation.
+- **react-router-dom** - For navigating between routes/pages on the client side
+- **express** - For managing the server-side instance
+- **mongodb & mongoose** - To integrate and allow the server to make calls to the MongoDB cluster
+- **prisma** - Served as a layer between the MongoDB cluster and the server
+- **trpc** - Handled data fetching between the server and the client
+- **zod** - For TypeScript schema validation
+- **sass** - Offers additional features over vanilla CSS
+- **concurrently** - For running both the client and server simultaneously
 
-```markdown
----
-import { ViewTransitions } from "astro:transitions"
----
+From there, I took the time to set-up a few basic client-side page routes and set-up the server-side with Express and tRPC so that I'd have a way to interact with a MongoDB cluster through Prisma.
 
-<html lang="en">
-  <head>
-    <title>My Awesome Website</title>
-    <ViewTransitions />
-  </head>
-  <body>
-    <h1>Welcome to my website!</h1>
-  </body>
-</html>
+On-top of all of that, setting up tRPC was pretty painless as the [quickstart](https://trpc.io/docs/quickstart) documantation basically walks you through a simple set-up, although you could also check out [create-t3-app's](https://github.com/t3-oss/create-t3-app) (an amazing template for a React, Tailwind, NextJS, tRPC focused app) implementation of tRPC on the client and server sides for an even better example.
+
+This included setting up a very simple React hook so that React could query a tRPC router.
+```ts
+import { createReactQueryHooks } from '@trpc/react';
+import type { appRouter } from '../../trpc/routers/index';
+
+export const trpc = createReactQueryHooks<typeof appRouter>();
 ```
 
-If you would like to use other effects aside from the default fade-in and fade-out effect, you can opt to use a few other options, or even opt specific elements out of being part of the view transition entirely.
+With the server-side mostly set-up and a client-side React hook implemented to handle tRPC querying, I could query data with minimal code, in a quick and efficient fashion; check this out:
 
+```tsx
+import { trpc } from '@hooks/trpc';
 
+export const ShowPokemon = () => {
+  const SPECIES_ID = Math.floor(Math.random() * 150) + 1;
 
-## Conclusion
-Astro's ViewTransitions are a game-changer in the realm of web development. They empower developers to craft immersive and delightful user experiences by seamlessly transitioning between web pages. With full control over transition effects and the ability to integrate with various project setups, ViewTransitions offer a versatile solution for elevating your web applications. So, if you're ready to take your web development skills to the next level and create truly captivating user journeys, give Astro's ViewTransitions a try. Your users will thank you for it!
+  const { data, isLoading } = trpc.useQuery([
+    'pokemon.getPokemon',
+    { POKEDEX_ID: SPECIES_ID },
+  ]);
 
-One of the most endearing aspects of Astro's ViewTransitions is how it encourages a relaxed, creative approach to web development. Gone are the days of dealing with complex JavaScript routing and page transitions that feel like an afterthought. With Astro, you can focus on what truly matters – crafting a delightful user experience that leaves your visitors wanting more.
+  if ( isLoading ) {
+    return <h1> Loading Data </h1>;
+  }
 
-Kudos to Astro's extraordinary team for this outstanding release; it's been a wild ride from start to where it's gotten to today, and I'm honored to be able to check out everything that they do.
+  return (
+    <h1>{data.name}</h1>
+  );
+};
+```
 
+Voila! Not only did we get intellisence on the returned query data, we also get some helper functions such as ``isLoading`` and ``isFetching``, for whenever the query re-runs.
 
+> ***NOTE:** In certain cases, you may want to opt for checking if ``data`` is undefined instead of if the query is loading, as focusing a different window and then re-focusing the window that your app is run in will cause the query to be re-run.*
 
-## Resources
-- [Astro](https://astro.build/)
+And with that, you have your front-end connected to your back-end with amazing typesafety between them.
+
+## Final Thoughts
+In my opinion, tRPC is something that the TypeScript space should have had for a long time now. It takes typesafety between the client and server, and implements it in a fantastic way, and I'm surprised that it took this long for something such as it to be developed.
+
+From the moment that I picked up tRPC and got it set-up in my project, using it has been such a phenomenal experience that I want every TypeScript developer to experience. It's made interacting between client-side and server-side TypeScript an absolute joy, since I now know exactly what types I'm interacting with between the two, and being able to not have to directly the schema of my MongoDB cluster and whatnot has been such a time saver.
+
+If you've been looking for a typesafe option to use that provides intellisense and typing between your client-side code and your server-side code, look no further and try out tRPC.
+
+### Resources
+- [tRPC](https://trpc.io/)
+- [Create T3 App](https://github.com/t3-oss/create-t3-app)
+- [Vite](https://github.com/vitejs/vite)
+- [Theo @t3dotgg](https://twitter.com/t3dotgg)
