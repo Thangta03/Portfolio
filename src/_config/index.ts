@@ -1,15 +1,15 @@
 export const config = {
     name: 'Thangta',
-    occupation: 'Software Engineer',
-    location: 'Arizona',
+    occupation: 'Data Analysis',
+    location: 'Budapest, Hungary',
 
-    github: 'Thangta03',
+    github: '@Thangta03',
     gitlab: '',
     linked_in: 'thangta',
     twitter: 'thangta03',
     email: 'thangta03@gmail.com',
 
-    resume: 'Thangta_Software_Engineer_Resume.pdf',
+    resume: 'Thangta_Resume.pdf',
 
     get summary() {
         return `I'm a ${this.occupation} and aspiring entrepreneur living in ${config.location}, and I love making things and having lots of side projects going on.`;
@@ -20,7 +20,7 @@ export const config = {
 
     seo: {
         keywords:
-            'thangta, software developer, software engineer, php, sql, mysql, node, nodejs, html, css, git, github',
+            'thangta, python, r, sql, mysql, node, nodejs, html, css, git, github',
 
         get description() {
             return config.summary;
