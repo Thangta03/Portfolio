@@ -16,7 +16,7 @@ const projects = await getCollection('projects');
             {
                 projects.length > 0 ? (
                     projects
-                        .sort((a, b) => a.data?.order - b.data?.order)
+                        .sort((a, b) => (a.data?.order ?? 0) - (b.data?.order ?? 0))
                         .map((project) => (
                             <article class="flex flex-col gap-2">
                                 <p class="text-sm m-0 text-neutral-600 dark:text-neutral-400">
@@ -76,4 +76,5 @@ const projects = await getCollection('projects');
             }
         </section>
     </section>
+</Layout>
 </Layout>

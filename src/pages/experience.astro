@@ -14,7 +14,7 @@ const contributions = await getCollection('contributions');
                 class="prose prose-zinc dark:prose-invert max-w-none mx-auto mb-6"
             >
                 <h1>
-                    Currently my final years and looking for intern opportunities
+                    Currently my final years at CUB and looking for intern opportunities
                 </h1>
             </div>
 
@@ -87,82 +87,7 @@ const contributions = await getCollection('contributions');
             <div
                 class="prose prose-zinc dark:prose-invert max-w-none mx-auto mb-6"
             >
-                <h1>
-                    I enjoy contributing to open-source projects that I
-                    personally use.
-                </h1>
             </div>
-
-            <section class="flex flex-col gap-6">
-                {
-                    contributions.length > 0 ? (
-                        contributions
-
-                            .sort((a, b) => (a.data?.order ?? 0) - (b.data?.order ?? 0))
-                            .map((contribution) => (
-                                <article class="flex flex-col gap-2">
-                                    <p class="text-sm m-0 text-neutral-600 dark:text-neutral-400">
-                                        {contribution.data.date_stamp ?? ''}
-                                    </p>
-                                    <h2 class="text-base m-0">
-                                        {contribution.data.website_link ||
-                                        contribution.data.repository_link ? (
-                                            <a
-                                                href={
-                                                    contribution.data
-                                                        ?.website_link ||
-                                                    contribution.data
-                                                        .repository_link
-                                                }
-                                                class="text-lg hover:underline hover:underline-offset-4"
-                                            >
-                                                {contribution.data.title}
-                                            </a>
-                                        ) : (
-                                            <span class="text-lg hover:underline hover:underline-offset-4">
-                                                {contribution.data.title}
-                                            </span>
-                                        )}
-                                    </h2>
-                                    <p class="text-base m-0 leading-relaxed text-neutral-600 dark:text-neutral-400">
-                                        {contribution.data.description}
-                                    </p>
-                                    <p class="m-0 flex flex-row flex-wrap gap-5">
-                                        {contribution.data.website_link && (
-                                            <a
-                                                href={
-                                                    contribution.data
-                                                        .website_link
-                                                }
-                                                class="text-base hover:underline hover:underline-offset-4"
-                                            >
-                                                Website →
-                                            </a>
-                                        )}
-                                        {contribution.data.repository_link && (
-                                            <a
-                                                href={
-                                                    contribution.data
-                                                        .repository_link
-                                                }
-                                                class="text-base hover:underline hover:underline-offset-4"
-                                            >
-                                                Source Code →
-                                            </a>
-                                        )}
-                                    </p>
-                                </article>
-                            ))
-                    ) : (
-                        <div>
-                            <h1 class="text-lg text-center">
-                                I haven't contributed to any open-source
-                                projects yet.
-                            </h1>
-                        </div>
-                    )
-                }
-            </section>
         </section>
     </section>    </section>
 </Layout>

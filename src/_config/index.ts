@@ -3,13 +3,13 @@ export const config = {
     occupation: 'Applied Economics Bachelor',
     location: 'Budapest, Hungary',
 
-    github: '@Thangta03',
-    gitlab: '',
-    linked_in: 'thangta',
+    github: 'Thangta03',
+    gitlab: 'tathang2003 ',
+    linked_in: 'thangta6174495',
     twitter: 'thangta03',
-    email: 'thangta03@gmail.com',
+    email: 'tathang2003@gmail.com',
 
-    resume: 'Thangta_Resume.pdf',
+    resume: 'Thang_Ta_Resume.pdf',
 
     get summary() {
         return `I'm a ${this.occupation} and Technology Enthusiast living in ${config.location}, and I love making things and having lots of side projects going on.`;
@@ -20,7 +20,7 @@ export const config = {
 
     seo: {
         keywords:
-            'thangta, python, r, sql, mysql, node, nodejs, html, css, git, github',
+            'thangta, python, r, sql, mysql, linux, nodejs, html, css, git, github',
 
         get description() {
             return config.summary;

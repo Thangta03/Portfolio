@@ -4,8 +4,8 @@ position: "Freelance"
 date_stamp: "Feb 2020 - Present"
 tags: [ 'Python', 'JavaScript', 'SQL', 'Linux', 'Fedora' ]
 description: "With around two years of hands-on experience in Python and a solid foundation in various programming tools, I'm adept at data analysis, simple web applications, and API applications."
-image: "the-pokemon-kingdom.png"
-website_link: "https://tpkrpg.net/"
+image: "Thang_Ta_Resume.png"
+website_link: "https://github.com/Thangta03"
 order: 1
 ---
 🔍 Skills & Certifications:

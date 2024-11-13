@@ -17,16 +17,6 @@
   <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FThangta03%Portfolio">
     <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FThangta03%Portfolio&countColor=%2337d67a" />
   </a>
-  <br /><br />
-
-  Check us out on Discord if you have any questions or immediate feedback!
-
-  <a href="https://discord.gg/NRZ2zWfpwK" target="_blank">
-    <img src="https://discord.com/api/guilds/1002005327555862620/widget.png?style=banner2" alt="Discord Banner" />
-  </a>
-</div>
-<br />
-
 
 
 # Table of Contents
