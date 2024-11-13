@@ -66,46 +66,6 @@
 
 
 
-# About The Project
-## Tech Stack
-- TypeScript
-- Astro
-- Tailwind
-
-## Features
-- Responsive mobile-first layout
-- Toggleable light and dark mode
-- Individual pages for all of your content needs
-- Automatically updating RSS feed based on your articles
-- A sick Absol and Shiny Absol decal in the corner of every page
-- Easily readable and expandable code base for feature development and refinement
-
-## Updating To Fit Your Information
-I tried to keep page information as modular as I possibly could. Updating your name, occupation, etc. is as easy as opening the [dedicated config]() file and adjusting the information accordingly. This will handle almost everything for you, which is fantastic.
-
-What it *doesn't* handle though, is the content on the *About* page, which is currently manually written. It's easy enough to update that stuff to your liking; just open the page in your editor of choice and go from there.
-
-Updating your work history, open source contributions, and project list is extremely easy as well. Add a Markdown file into any one of the three `src/content` folders, add the frontmatter and content of the file, and it'll automatically be found and displayed on your website. Adding a blog article is just as easy, which is wonderful.
-If you get confused on what your Markdown files should have, you can check out and use my existing files as a reference.
-
-## Error Handling in Workflow
-The workflow file `.github/workflows/deploy.yml` now includes error handling for the installation process using `pnpm`. This ensures that any issues during the installation process are properly handled, preventing the workflow from failing unexpectedly.
-
-To run the workflow with the new error handling, follow these steps:
-1. Ensure you have the latest version of `pnpm` installed.
-2. Update your workflow file to include the error handling steps.
-3. Trigger the workflow by pushing changes to the `main` branch or manually dispatching the workflow.
-
-For more details, refer to the `.github/workflows/deploy.yml` file in this repository.
-
-Additionally, the workflow now includes a step to upload the built site to GitHub Pages. This ensures that your site is automatically deployed to GitHub Pages after a successful build.
-
-To run the workflow with the new deployment step, follow these steps:
-1. Ensure you have the latest version of `pnpm` installed.
-2. Update your workflow file to include the deployment step.
-3. Trigger the workflow by pushing changes to the `main` branch or manually dispatching the workflow.
-
-For more details, refer to the `.github/workflows/deploy.yml` file in this repository.
 
 
 
