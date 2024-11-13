@@ -12,7 +12,7 @@ export const config = {
     resume: 'Thang_Ta_Resume.pdf',
 
     get summary() {
-        return `I'm a ${this.occupation} and Technology Enthusiast living in ${config.location}, and I love making things and having lots of side projects going on.`;
+        return `I'm ${this.occupation} and Technology Enthusiast living in ${config.location}, and I love making things and having lots of side projects going on.`;
     },
     get headline() {
         return `Hey, my name is ${config.name}.`;
