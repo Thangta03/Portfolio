@@ -5,7 +5,7 @@
   <h1 align="center">My Personal Website</h1>
 
 
-
+Credit to: @toxicocious to make this dream come true
 
 # License
 Licensed under GNU GPL 3.
