@@ -14,6 +14,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.2
         version: 5.1.2(astro@4.16.10(rollup@4.25.0)(typescript@5.6.3))(tailwindcss@3.3.3)
+      '@stackbit/types':
+        specifier: ^2.1.7
+        version: 2.1.7
       astro:
         specifier: ^4.16.10
         version: 4.16.10(rollup@4.25.0)(typescript@5.6.3)
@@ -576,6 +579,9 @@ packages:
 
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
+
+  '@stackbit/types@2.1.7':
+    resolution: {integrity: sha512-bxX5yEoZA86IGLNYb1L0zSIUGvul8I4TZv8rSPgl2KBlnFMr7XX67rNz27rCuK/e0J5eSSRLwBjPqQB/nrjo/Q==}
 
   '@tailwindcss/typography@0.5.9':
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
@@ -2572,6 +2578,8 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/vscode-textmate@9.3.0': {}
+
+  '@stackbit/types@2.1.7': {}
 
   '@tailwindcss/typography@0.5.9(tailwindcss@3.3.3)':
     dependencies:
