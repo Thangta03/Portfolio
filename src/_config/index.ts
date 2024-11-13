@@ -1,6 +1,6 @@
 export const config = {
-    name: 'Thangta',
-    occupation: 'Data Analysis',
+    name: 'Thang',
+    occupation: 'Applied Economics Bachelor',
     location: 'Budapest, Hungary',
 
     github: '@Thangta03',
@@ -12,7 +12,7 @@ export const config = {
     resume: 'Thangta_Resume.pdf',
 
     get summary() {
-        return `I'm a ${this.occupation} and aspiring entrepreneur living in ${config.location}, and I love making things and having lots of side projects going on.`;
+        return `I'm a ${this.occupation} and Technology Enthusiast living in ${config.location}, and I love making things and having lots of side projects going on.`;
     },
     get headline() {
         return `Hey, my name is ${config.name}.`;
