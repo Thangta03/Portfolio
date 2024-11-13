@@ -6,7 +6,7 @@ export const config = {
     github: 'Thangta03',
     gitlab: 'tathang2003 ',
     linked_in: 'thangta6174495',
-    twitter: 'thangta03',
+    twitter: 'ThngT79814',
     email: 'tathang2003@gmail.com',
 
     resume: 'Thang_Ta_Resume.pdf',
